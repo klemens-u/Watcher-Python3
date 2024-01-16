@@ -10,12 +10,12 @@ It's written in Python, making it easier to hack.
 
 ## Requirements
 
-You need Python 2.7 and the [pyinotify](http://github.com/seb-m/pyinotify)
-library.
+This fork is updated for Python 3 to run on Ubuntu 22.04 and similar.
+Watcher uses the [pyinotify](http://github.com/seb-m/pyinotify) library.
 
-In Ubuntu (and Debian) you can install these with:
+In Ubuntu (and Debian) you can install it with:
 
-    sudo apt-get install python python-pyinotify
+    sudo apt-get install python3-pyinotify
 
 ## Configuration
 
@@ -33,7 +33,6 @@ Make sure watcher.py is marked as executable:
 
     chmod +x watcher.py
 
-
 Start the daemon with:
 
     ./watcher.py start
@@ -45,6 +44,10 @@ Stop it with:
 Restart it with:
 
     ./watcher.py restart
+
+Debug it with: (log output to console)
+
+    ./watcher.py debug
 
 If you don't want the daemon to fork to the background, start it with
 
